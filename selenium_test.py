@@ -2,7 +2,7 @@ import pyautogui
 from selenium.webdriver import Chrome
 import os
 
-caminho_imagem = os.path.abspath('ex3.png')
+caminho_imagem = os.path.abspath('ex2.png')
 driver = Chrome()
 driver.maximize_window()
 
@@ -19,9 +19,9 @@ pyautogui.sleep(2)
 pyautogui.write(caminho_imagem)
 pyautogui.press('enter')
 driver.implicitly_wait(30)
-text = driver.find_element('xpath', '//*[@id="ucj-4"]/span[1]')
+text = driver.find_element('xpath', '//*[@id="ucj-4"]/span[1]') 
 text.click()
-selecionar_todo_texto = driver.find_element('xpath', '//*[@id="yDmH0d"]/c-wiz/div/div[2]/div/c-wiz/div/div[2]/div/div/div/div[1]/div/div/div[2]/div/button/span')
+selecionar_todo_texto = driver.find_element('xpath', '//*[@id="yDmH0d"]/c-wiz/div/div[2]/div/c-wiz/div/div[2]/c-wiz/div/div/div/div[1]/div/div/div[2]/div/button/span')
 selecionar_todo_texto.click()
 ouvir = driver.find_element('xpath','//*[@id="ucc-3"]/span[1]')
 ouvir.click()
